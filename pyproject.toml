@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "center-map"
+version = "0.1.0"
+description = "Recenter crystallographic density maps (e.g. PDBe 2fofc/fofc) on the model; a command for PyMOL"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Arthur Zalevsky", email = "aozalevsky@gmail.com"}]
+requires-python = ">=3.6"
+dependencies = ["numpy"]  # the viewer itself is not installed from PyPI
+keywords = ["pymol", "electron density", "crystallography", "ccp4", "map"]
+
+[project.urls]
+Repository = "https://github.com/aozalevsky/center-map"
+
+[project.optional-dependencies]
+test = ["pytest", "gemmi"]
+
+[tool.setuptools]
+py-modules = ["center_map"]
